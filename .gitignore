@@ -3,6 +3,7 @@
 
 # Python env
 marco-bot
+models/gpt2_finetuned
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
