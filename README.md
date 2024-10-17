@@ -82,3 +82,9 @@ At the end of the conversation, you will be able to see a JSON output with the c
     'age': 30
 }
 ```
+
+## Licensing
+
+All packages in this repository are open-source software and licensed under the [MIT License](https://github.com/joakimvivas/marco-bot/blob/main/LICENSE). By contributing in this repository, you agree to release your code under this license as well.
+
+Let's build the future of Marco chatbot development together! 🤖🚀
