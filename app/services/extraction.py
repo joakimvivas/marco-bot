@@ -28,7 +28,7 @@ def extract_name(user_input):
 
 # Function to extract a phone number from the user's input
 def extract_phone(user_input):
-    phone_regex = r'\b\d{9}\b'  # Regex pattern for a 9-digit phone number
+    phone_regex = r'(?:\+34\s?)?(?:\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{3})'  # Allows spaces, dashes, parentheses and optional prefix (+34)
     match = re.search(phone_regex, user_input)
     return match.group(0) if match else None  # Return the phone number or None
 
