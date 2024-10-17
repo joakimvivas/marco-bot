@@ -56,8 +56,29 @@ In addition, it has different functions, such as ```extract_name```, ```extract_
 
 ### Training the model
 
+When the model is loaded successfully you will see a similar text in the terminal output:
 
+```
+Loading model and tokenizer from app/models/gpt2_finetuned.
+Model and tokenizer loaded successfully.
+```
 
 ### Chatting with the bot
 
+Bellow, you have an example of a conversation with Marco:
 
+![Marco conversation example](chatbot-example-conversation.png)
+
+At the end of the conversation, you will be able to see a JSON output with the captured values:
+
+```
+{
+    'nombre': 'Pedro', 
+    'email': 'pedro@picapiedra.com', 
+    'phone': '600102030', 
+    'city': 'Barcelona', 
+    'career': 'Ingenieria Informatica', 
+    'university': 'Stanford University', 
+    'age': 30
+}
+```
