@@ -1,15 +1,31 @@
-import os  # Import to work with directories and file paths
-from transformers import AutoTokenizer, AutoModelForCausalLM  # Import for model and tokenizer
+import os
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from fastapi import FastAPI
 from app.routers import chatbot
-from app.models.gpt_model import load_model_and_tokenizer, train_model  # Import functions from your model management
-from app.models.gpt_model import MODEL_DIR  # Import the directory where the model is stored
+from app.models.gpt_model import load_model_and_tokenizer, train_model
+from app.models.gpt_model import MODEL_DIR
 
 # Create a FastAPI app instance
 app = FastAPI()
 
 # Include the chatbot router to manage the bot's routes
 app.include_router(chatbot.router)
+
+# Initialize global variables for model and tokenizer
+model = None
+tokenizer = None
+
+# Function to ensure all special tokens are added
+def ensure_special_tokens(tokenizer):
+    special_tokens_dict = {}
+    if tokenizer.pad_token is None:
+        special_tokens_dict['pad_token'] = '[PAD]'  # Add pad token if not present
+    if tokenizer.eos_token is None:
+        special_tokens_dict['eos_token'] = '<|endoftext|>'  # Add eos token if not present
+
+    if special_tokens_dict:
+        tokenizer.add_special_tokens(special_tokens_dict)
+        print(f"Added special tokens: {special_tokens_dict}")  # Log the added tokens
 
 # Startup event: Load the model and tokenizer when the app starts
 @app.on_event("startup")
@@ -22,8 +38,9 @@ async def startup_event():
             print("Model directory is empty. Downloading and initializing resources...")
             tokenizer = AutoTokenizer.from_pretrained("gpt2")
             
-            # Add a new padding token if not present
-            tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+            # Ensure that special tokens (eos_token, pad_token) are present in the tokenizer
+            ensure_special_tokens(tokenizer)
+            
             model = AutoModelForCausalLM.from_pretrained("gpt2")
             
             # Resize the model's embeddings to accommodate the new tokens
