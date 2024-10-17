@@ -45,3 +45,32 @@ def extract_city(user_input):
         if ent.label_ in ["GPE", "LOC"]:  # Look for entities labeled as GPE (geopolitical) or LOC (location)
             return ent.text
     return None  # Return None if no city is found
+
+def extract_career(user_input):
+    # We assume the user provides the race name in their response
+    # You can add validations or lists of races if you wish
+    return user_input.strip()
+
+def extract_university(user_input):
+    doc = nlp(user_input)
+    for ent in doc.ents:
+        if ent.label_ == "ORG":
+            return ent.text
+    return None
+
+def extract_age(user_input):
+    doc = nlp(user_input)
+    for ent in doc.ents:
+        if ent.label_ == "NUM":
+            # Try to convert the entity to an integer
+            try:
+                age = int(ent.text)
+                return age
+            except ValueError:
+                continue
+    # If a numeric entity was not found, search for numbers in the text
+    age_regex = r'\b\d{1,2}\b'
+    match = re.search(age_regex, user_input)
+    if match:
+        return int(match.group(0))
+    return None
