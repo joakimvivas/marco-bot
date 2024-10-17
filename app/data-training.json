@@ -1,0 +1,402 @@
+[
+    {
+        "input": "Hola, quiero crear una cuenta nueva.",
+        "response": "¡Hola! Estoy aquí para ayudarte. ¿Cuál es tu nombre?"
+    },
+    {
+        "input": "Me llamo Ana Pérez.",
+        "response": "Encantada de conocerte, Ana. ¿Puedes proporcionarme tu correo electrónico?"
+    },
+    {
+        "input": "Sí, es ana.perez@example.com.",
+        "response": "Gracias, Ana. ¿Cuál es tu número de teléfono?"
+    },
+    {
+        "input": "Mi número es 654321987.",
+        "response": "Perfecto. ¿En qué ciudad vives actualmente?"
+    },
+    {
+        "input": "Vivo en Sevilla.",
+        "response": "Sevilla es una ciudad maravillosa. ¿Cuántos años tienes?"
+    },
+    {
+        "input": "Tengo 28 años.",
+        "response": "Genial. ¿Qué carrera universitaria has estudiado?"
+    },
+    {
+        "input": "Estudié Arquitectura.",
+        "response": "Excelente. ¿En qué universidad te graduaste?"
+    },
+    {
+        "input": "En la Universidad de Sevilla.",
+        "response": "Entiendo. ¿Te has mudado de ciudad alguna vez?"
+    },
+    {
+        "input": "No, siempre he vivido aquí.",
+        "response": "Muy bien. ¿Quieres agregar algo más a tu perfil?"
+    },
+    {
+        "input": "No, eso es todo.",
+        "response": "Tu perfil ha sido creado exitosamente. ¡Gracias por registrarte, Ana!"
+    },
+    {
+        "input": "Buenas, necesito registrarme.",
+        "response": "Hola, estoy aquí para ayudarte. ¿Cómo te llamas?"
+    },
+    {
+        "input": "Soy Pedro López.",
+        "response": "Mucho gusto, Pedro. ¿Cuál es tu correo electrónico?"
+    },
+    {
+        "input": "Es pedro_lopez@example.com.",
+        "response": "Gracias. ¿Me proporcionas tu número de teléfono?"
+    },
+    {
+        "input": "Claro, es 612345678.",
+        "response": "¿En qué ciudad resides?"
+    },
+    {
+        "input": "Actualmente vivo en Bilbao.",
+        "response": "Bilbao es una ciudad encantadora. ¿Cuál es tu edad?"
+    },
+    {
+        "input": "Tengo 35 años.",
+        "response": "Perfecto. ¿Qué carrera has estudiado?"
+    },
+    {
+        "input": "Ingeniería Industrial.",
+        "response": "Excelente elección. ¿En qué universidad?"
+    },
+    {
+        "input": "En la Universidad del País Vasco.",
+        "response": "Muy bien. ¿Te has mudado anteriormente?"
+    },
+    {
+        "input": "Sí, viví en Madrid durante 5 años.",
+        "response": "Entiendo. ¿Hay algo más que quieras añadir?"
+    },
+    {
+        "input": "No, eso sería todo.",
+        "response": "Tu perfil está listo. ¡Gracias por registrarte, Pedro!"
+    },
+    {
+        "input": "Hola, quiero registrarme pero no sé cómo.",
+        "response": "No te preocupes, te ayudaré. ¿Cuál es tu nombre?"
+    },
+    {
+        "input": "Me llamo Laura Martínez.",
+        "response": "Encantada, Laura. ¿Puedes darme tu correo electrónico?"
+    },
+    {
+        "input": "laura.martinez@example.com",
+        "response": "Gracias. ¿Cuál es tu número de teléfono?"
+    },
+    {
+        "input": "Es 678912345.",
+        "response": "¿Dónde vives actualmente?"
+    },
+    {
+        "input": "En Zaragoza.",
+        "response": "Zaragoza es hermosa. ¿Cuántos años tienes?"
+    },
+    {
+        "input": "Tengo 26 años.",
+        "response": "Genial. ¿Qué estudiaste en la universidad?"
+    },
+    {
+        "input": "Derecho.",
+        "response": "Interesante. ¿En qué universidad te graduaste?"
+    },
+    {
+        "input": "En la Universidad de Zaragoza.",
+        "response": "Perfecto. ¿Te has mudado antes?"
+    },
+    {
+        "input": "No, siempre he vivido aquí.",
+        "response": "Comprendo. ¿Quieres añadir algo más?"
+    },
+    {
+        "input": "No, gracias.",
+        "response": "Tu perfil ha sido creado con éxito. ¡Gracias por registrarte, Laura!"
+    },
+    {
+        "input": "Quiero crear una cuenta.",
+        "response": "¡Hola! Será un placer ayudarte. ¿Cuál es tu nombre?"
+    },
+    {
+        "input": "Mi nombre es Luis García.",
+        "response": "Encantado, Luis. ¿Me das tu correo electrónico, por favor?"
+    },
+    {
+        "input": "luisgarcia@example.com",
+        "response": "Gracias, Luis. ¿Cuál es tu número de teléfono?"
+    },
+    {
+        "input": "Es el 634567890.",
+        "response": "¿En qué ciudad estás viviendo?"
+    },
+    {
+        "input": "Resido en Málaga.",
+        "response": "¡Málaga es fantástica! ¿Qué edad tienes?"
+    },
+    {
+        "input": "Tengo 30 años.",
+        "response": "Perfecto. ¿Qué carrera estudiaste?"
+    },
+    {
+        "input": "Administración de Empresas.",
+        "response": "Excelente. ¿En qué universidad?"
+    },
+    {
+        "input": "Universidad de Málaga.",
+        "response": "Muy bien. ¿Te has mudado anteriormente?"
+    },
+    {
+        "input": "Sí, viví en Granada durante mis estudios.",
+        "response": "Entiendo. ¿Algo más que quieras agregar?"
+    },
+    {
+        "input": "No, eso es todo.",
+        "response": "Tu perfil ha sido creado. ¡Gracias por registrarte, Luis!"
+    },
+    {
+        "input": "Hola, estoy interesado en registrarme.",
+        "response": "¡Hola! Con gusto te ayudaré. ¿Cómo te llamas?"
+    },
+    {
+        "input": "Soy Marta Rodríguez.",
+        "response": "Un placer, Marta. ¿Cuál es tu correo electrónico?"
+    },
+    {
+        "input": "marta_rodriguez@example.com",
+        "response": "Gracias. ¿Me proporcionas tu número de teléfono?"
+    },
+    {
+        "input": "Sí, es 698765432.",
+        "response": "¿Dónde vives actualmente?"
+    },
+    {
+        "input": "En Alicante.",
+        "response": "Alicante es preciosa. ¿Qué edad tienes?"
+    },
+    {
+        "input": "Tengo 29 años.",
+        "response": "Genial. ¿Qué estudiaste en la universidad?"
+    },
+    {
+        "input": "Biología.",
+        "response": "Interesante elección. ¿En qué universidad?"
+    },
+    {
+        "input": "Universidad de Alicante.",
+        "response": "Perfecto. ¿Te has mudado antes?"
+    },
+    {
+        "input": "No, siempre he vivido aquí.",
+        "response": "Comprendo. ¿Quieres añadir algo más?"
+    },
+    {
+        "input": "No, gracias por tu ayuda.",
+        "response": "Tu perfil está listo. ¡Gracias por registrarte, Marta!"
+    },
+    {
+        "input": "Buenas tardes, necesito ayuda para registrarme.",
+        "response": "¡Hola! Estoy aquí para ayudarte. ¿Cuál es tu nombre?"
+    },
+    {
+        "input": "Me llamo José Fernández.",
+        "response": "Mucho gusto, José. ¿Cuál es tu correo electrónico?"
+    },
+    {
+        "input": "jose.fernandez@example.com",
+        "response": "Gracias. ¿Cuál es tu número de teléfono?"
+    },
+    {
+        "input": "Es 677889900.",
+        "response": "¿En qué ciudad resides?"
+    },
+    {
+        "input": "En Córdoba.",
+        "response": "Córdoba tiene un gran encanto. ¿Qué edad tienes?"
+    },
+    {
+        "input": "Tengo 27 años.",
+        "response": "Perfecto. ¿Qué carrera has estudiado?"
+    },
+    {
+        "input": "Historia del Arte.",
+        "response": "Excelente. ¿En qué universidad te graduaste?"
+    },
+    {
+        "input": "En la Universidad de Córdoba.",
+        "response": "Muy bien. ¿Te has mudado anteriormente?"
+    },
+    {
+        "input": "No, siempre he vivido aquí.",
+        "response": "Entiendo. ¿Quieres añadir algo más a tu perfil?"
+    },
+    {
+        "input": "No, eso es todo por ahora.",
+        "response": "Tu perfil ha sido creado exitosamente. ¡Gracias por registrarte, José!"
+    },
+    {
+        "input": "Hola, ¿puedes ayudarme a registrarme?",
+        "response": "¡Claro que sí! ¿Cómo te llamas?"
+    },
+    {
+        "input": "Soy Isabel Morales.",
+        "response": "Encantada, Isabel. ¿Cuál es tu correo electrónico?"
+    },
+    {
+        "input": "isabel.morales@example.com",
+        "response": "Gracias. ¿Tu número de teléfono?"
+    },
+    {
+        "input": "Es 655443322.",
+        "response": "¿Dónde vives actualmente?"
+    },
+    {
+        "input": "En Granada.",
+        "response": "Granada es maravillosa. ¿Qué edad tienes?"
+    },
+    {
+        "input": "Tengo 31 años.",
+        "response": "Genial. ¿Qué estudiaste en la universidad?"
+    },
+    {
+        "input": "Filosofía.",
+        "response": "Interesante elección. ¿En qué universidad?"
+    },
+    {
+        "input": "Universidad de Granada.",
+        "response": "Perfecto. ¿Te has mudado antes?"
+    },
+    {
+        "input": "Sí, viví en Málaga durante un año.",
+        "response": "Entiendo. ¿Algo más que quieras agregar?"
+    },
+    {
+        "input": "No, gracias.",
+        "response": "Tu perfil ha sido creado. ¡Gracias por registrarte, Isabel!"
+    },
+    {
+        "input": "Hola, me gustaría crear una cuenta.",
+        "response": "¡Hola! Estoy aquí para ayudarte. ¿Cuál es tu nombre?"
+    },
+    {
+        "input": "Me llamo Diego Sánchez.",
+        "response": "Encantado, Diego. ¿Cuál es tu correo electrónico?"
+    },
+    {
+        "input": "diego.sanchez@example.com",
+        "response": "Gracias. ¿Cuál es tu número de teléfono?"
+    },
+    {
+        "input": "Es 699887766.",
+        "response": "¿En qué ciudad vives?"
+    },
+    {
+        "input": "Vivo en Salamanca.",
+        "response": "Salamanca tiene una gran historia. ¿Qué edad tienes?"
+    },
+    {
+        "input": "Tengo 25 años.",
+        "response": "Perfecto. ¿Qué carrera estudiaste?"
+    },
+    {
+        "input": "Literatura.",
+        "response": "Excelente. ¿En qué universidad?"
+    },
+    {
+        "input": "Universidad de Salamanca.",
+        "response": "Muy bien. ¿Te has mudado antes?"
+    },
+    {
+        "input": "No, siempre he vivido aquí.",
+        "response": "Comprendo. ¿Quieres añadir algo más?"
+    },
+    {
+        "input": "No, eso es todo.",
+        "response": "Tu perfil está listo. ¡Gracias por registrarte, Diego!"
+    },
+    {
+        "input": "Hola, necesito registrarme pero no sé cómo empezar.",
+        "response": "No te preocupes, te guiaré. ¿Cómo te llamas?"
+    },
+    {
+        "input": "Soy Elena Ruiz.",
+        "response": "Encantada de conocerte, Elena. ¿Me das tu correo electrónico?"
+    },
+    {
+        "input": "elena.ruiz@example.com",
+        "response": "Gracias. ¿Cuál es tu número de teléfono?"
+    },
+    {
+        "input": "Es 667788990.",
+        "response": "¿Dónde vives actualmente?"
+    },
+    {
+        "input": "En Vigo.",
+        "response": "Vigo es una ciudad hermosa. ¿Qué edad tienes?"
+    },
+    {
+        "input": "Tengo 32 años.",
+        "response": "Genial. ¿Qué estudiaste en la universidad?"
+    },
+    {
+        "input": "Economía.",
+        "response": "Excelente elección. ¿En qué universidad?"
+    },
+    {
+        "input": "Universidad de Vigo.",
+        "response": "Perfecto. ¿Te has mudado antes?"
+    },
+    {
+        "input": "Sí, viví en A Coruña durante mi infancia.",
+        "response": "Entiendo. ¿Algo más que quieras agregar?"
+    },
+    {
+        "input": "No, muchas gracias por tu ayuda.",
+        "response": "Tu perfil ha sido creado. ¡Gracias por registrarte, Elena!"
+    },
+    {
+        "input": "Buenas, quiero registrarme para usar la plataforma.",
+        "response": "¡Hola! Con gusto te ayudo. ¿Cuál es tu nombre?"
+    },
+    {
+        "input": "Me llamo Alberto Torres.",
+        "response": "Encantado, Alberto. ¿Tu correo electrónico, por favor?"
+    },
+    {
+        "input": "alberto.torres@example.com",
+        "response": "Gracias. ¿Cuál es tu número de teléfono?"
+    },
+    {
+        "input": "Es 676554433.",
+        "response": "¿En qué ciudad resides?"
+    },
+    {
+        "input": "En Pamplona.",
+        "response": "Pamplona es conocida por sus tradiciones. ¿Qué edad tienes?"
+    },
+    {
+        "input": "Tengo 29 años.",
+        "response": "Perfecto. ¿Qué carrera has estudiado?"
+    },
+    {
+        "input": "Ingeniería Mecánica.",
+        "response": "Excelente. ¿En qué universidad te graduaste?"
+    },
+    {
+        "input": "Universidad de Navarra.",
+        "response": "Muy bien. ¿Te has mudado anteriormente?"
+    },
+    {
+        "input": "No, siempre he vivido aquí.",
+        "response": "Comprendo. ¿Quieres añadir algo más?"
+    },
+    {
+        "input": "No, eso es todo.",
+        "response": "Tu perfil está listo. ¡Gracias por registrarte, Alberto!"
+    }
+]

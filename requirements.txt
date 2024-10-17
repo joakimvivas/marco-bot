@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+jinja2
+transformers 
+torch
+datasets
+transformers[torch]
+scikit-learn
+spacy

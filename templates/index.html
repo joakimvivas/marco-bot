@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <!-- Import Tailwind CSS from the CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Centering the chatbot container vertically and horizontally -->
+    <div class="flex items-center justify-center min-h-screen">
+        <!-- Chatbox container with a shadow and rounded corners -->
+        <div class="flex flex-col bg-white shadow-lg rounded-lg w-full max-w-md">
+            <!-- Chat header with a blue background and centered title -->
+            <div class="bg-blue-500 text-white text-center py-4 rounded-t-lg">
+                <h2 class="text-xl font-semibold">Chatbot</h2>
+            </div>
+            <!-- Chat messages container where messages will be displayed -->
+            <div id="messages" class="flex-1 overflow-y-auto p-4 space-y-4">
+                <!-- Messages will be dynamically appended here -->
+            </div>
+            <!-- User input section with a text field and send button -->
+            <div class="flex items-center border-t border-gray-300 p-4">
+                <!-- Input field for the user to type their message -->
+                <input type="text" id="user-input" class="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe tu mensaje...">
+                <!-- Send button to submit the user's message -->
+                <button id="send-button" class="ml-4 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 focus:outline-none">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to load initial bot messages when the page is loaded
+        window.onload = async function() {
+            const messagesDiv = document.getElementById('messages');
+
+            // Fetch initial bot responses from the server
+            try {
+                const response = await fetch('/start-conversation/');
+                const data = await response.json();
+
+                // Check if bot_responses is an array and handle it
+                if (data.bot_responses && Array.isArray(data.bot_responses)) {
+                    data.bot_responses.forEach(botMessage => {
+                        // Create a message bubble for each bot response
+                        const botMessageDiv = document.createElement('div');
+                        botMessageDiv.className = "flex justify-start";
+                        botMessageDiv.innerHTML = `
+                            <div class="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-bl-none max-w-xs">
+                                ${botMessage}
+                            </div>
+                        `;
+                        // Append the bot message to the chat
+                        messagesDiv.appendChild(botMessageDiv);
+                        // Scroll to the bottom to show the latest message
+                        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                    });
+                } else if (data.bot_response) {
+                    // Fallback for handling a single bot response
+                    const botMessageDiv = document.createElement('div');
+                    botMessageDiv.className = "flex justify-start";
+                    botMessageDiv.innerHTML = `
+                        <div class="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-bl-none max-w-xs">
+                            ${data.bot_response}
+                        </div>
+                    `;
+                    messagesDiv.appendChild(botMessageDiv);
+                    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                }
+            } catch (error) {
+                // Log any error during the fetch process
+                console.error('Error:', error);
+            }
+        };
+
+        // Event handler for the send button to process and send user messages
+        document.getElementById('send-button').onclick = async () => {
+            const userInput = document.getElementById('user-input');
+            const userMessage = userInput.value.trim();
+            const messagesDiv = document.getElementById('messages');
+
+            // Prevent sending empty messages
+            if (userMessage === '') return;
+
+            // Create a message bubble for the user's message
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.className = "flex justify-end";
+            userMessageDiv.innerHTML = `
+                <div class="bg-blue-500 text-white p-3 rounded-lg rounded-br-none max-w-xs">
+                    ${userMessage}
+                </div>
+            `;
+            // Append the user message to the chat
+            messagesDiv.appendChild(userMessageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+            // Clear the input field after sending the message
+            userInput.value = '';
+
+            // Send the user's message to the backend
+            try {
+                const response = await fetch('/send-message/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ user_message: userMessage })
+                });
+
+                const data = await response.json();
+
+                // Display the bot's response in a message bubble
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.className = "flex justify-start";
+                botMessageDiv.innerHTML = `
+                    <div class="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-bl-none max-w-xs">
+                        ${data.bot_response}
+                    </div>
+                `;
+                messagesDiv.appendChild(botMessageDiv);
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            } catch (error) {
+                // Log any error during the message sending process
+                console.error('Error:', error);
+            }
+        };
+
+        // Allow sending the message by pressing the Enter key
+        document.getElementById('user-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.getElementById('send-button').click();
+            }
+        });
+    </script>
+</body>
+</html>
