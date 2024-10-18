@@ -14,6 +14,10 @@
 
 - [ ] Introduce a new language, with the ability to configure (select) the preferred language
 
+## List of issues and bugs
+
+Here you can find the [list](https://github.com/joakimvivas/marco-bot/issues) of issues and bugs and how we are working to fix them. Thanks for your collaboration!
+
 ## Running the project locally
 
 1. Create the Python virtual environment
