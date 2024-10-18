@@ -2,6 +2,20 @@
 
 **Marco** is an experimental chatbot prototype that uses [Hugging Face Transformers and openai-community/gpt2](https://huggingface.co/openai-community/gpt2) as a base model and also spaCy for the NLP (Natural Language Processing). **Marco** is based on [FastAPI](https://fastapi.tiangolo.com/) framework and [Jinja2](https://jinja.palletsprojects.com/en/3.0.x/) template engine with [Tailwind CSS](https://tailwindcss.com/) for styling.
 
+## List of main milestones and features
+
+- [x] Have a prototype of a chatbot, trained from a file, that can have a fluid conversation with a user using natural language
+
+- [ ] Improve the conversation (NLP) with the chatbot so that it has the ability to differentiate between "me llamo" (my name) when we talk about the name or "llamo" (I call) when it is a phone number
+
+- [ ] Improve the flow of the conversation ```/app/services/conversation.py``` so that it can be more modular and configurable
+
+- [ ] Expand the training capacity, currently from the file ```/app/data-training.json```, towards external data sources (with and without defined structure)
+
+- [ ] Introduce a new language, with the ability to configure (select) the preferred language
+
+- [ ] 
+
 ## Running the project locally
 
 1. Create the Python virtual environment
