@@ -14,8 +14,6 @@
 
 - [ ] Introduce a new language, with the ability to configure (select) the preferred language
 
-- [ ] 
-
 ## Running the project locally
 
 1. Create the Python virtual environment
